@@ -1,0 +1,16 @@
+{
+    "name": "pallo/lib-tokenizer",
+    "description": "Tokenizer library of the Pallo framework.",
+    "version": "0.1.0",
+    "authors": [
+        {
+            "name": "Joris Vandeweerd",
+            "email": "joris@statik.be"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "pallo\\library\\tokenizer\\": ["src/", "test/src/"]
+        }
+    }    
+}
