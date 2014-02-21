@@ -1,6 +1,6 @@
 <?php
 
-namespace pallo\library\tokenizer\exception;
+namespace ride\library\tokenizer\exception;
 
 use \Exception;
 

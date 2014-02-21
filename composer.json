@@ -1,6 +1,6 @@
 {
-    "name": "pallo/lib-tokenizer",
-    "description": "Tokenizer library of the Pallo framework.",
+    "name": "ride/lib-tokenizer",
+    "description": "Tokenizer library of the Ride framework.",
     "version": "0.1.0",
     "authors": [
         {
@@ -10,7 +10,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "pallo\\library\\tokenizer\\": ["src/", "test/src/"]
+            "ride\\library\\tokenizer\\": ["src/", "test/src/"]
         }
     }    
 }

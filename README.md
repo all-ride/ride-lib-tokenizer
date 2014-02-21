@@ -1,4 +1,4 @@
-# Pallo: Tokenizer Library
+# Ride: Tokenizer Library
 
 This library gives you some classes to parse a string into tokens.
 
@@ -8,9 +8,9 @@ Some example code in the context of the ORM module:
     
     <?php
     
-    use pallo\library\tokenizer\symbol\NestedSymbol;
-    use pallo\library\tokenizer\symbol\SimpleSymbol;
-    use pallo\library\tokenizer\Tokenizer;
+    use ride\library\tokenizer\symbol\NestedSymbol;
+    use ride\library\tokenizer\symbol\SimpleSymbol;
+    use ride\library\tokenizer\Tokenizer;
     
     $tokenizer = new Tokenizer();
     $tokenizer->setWillTrimTokens(true);
