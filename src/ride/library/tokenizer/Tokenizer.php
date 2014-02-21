@@ -1,8 +1,8 @@
 <?php
 
-namespace pallo\library\tokenizer;
+namespace ride\library\tokenizer;
 
-use pallo\library\tokenizer\symbol\Symbol;
+use ride\library\tokenizer\symbol\Symbol;
 
 /**
  * String tokenizer
@@ -23,7 +23,7 @@ class Tokenizer {
 
     /**
      * Adds a tokenize symbol to this tokenizer
-     * @param pallo\library\tokenizer\symbol\Symbol $symbol
+     * @param ride\library\tokenizer\symbol\Symbol $symbol
      * @return null
      */
     public function addSymbol(Symbol $symbol) {

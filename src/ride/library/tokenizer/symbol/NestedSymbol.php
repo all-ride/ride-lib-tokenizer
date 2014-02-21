@@ -1,9 +1,9 @@
 <?php
 
-namespace pallo\library\tokenizer\symbol;
+namespace ride\library\tokenizer\symbol;
 
-use pallo\library\tokenizer\exception\TokenizeException;
-use pallo\library\tokenizer\Tokenizer;
+use ride\library\tokenizer\exception\TokenizeException;
+use ride\library\tokenizer\Tokenizer;
 
 /**
  * Nested symbol for the tokenizer
@@ -12,7 +12,7 @@ class NestedSymbol extends AbstractSymbol {
 
     /**
      * Tokenizer to tokenize the value between the open and close symbol
-     * @var pallo\library\tokenizer\Tokenizer
+     * @var ride\library\tokenizer\Tokenizer
      */
     protected $tokenizer;
 
@@ -56,7 +56,7 @@ class NestedSymbol extends AbstractSymbol {
      * Constructs a new nested tokenizer
      * @param string $symbolOpen Open symbol of the token
      * @param string $symbolClose Close symbol of the token
-     * @param pallo\library\tokenizer\Tokenizer $tokenizer When provided, the
+     * @param ride\library\tokenizer\Tokenizer $tokenizer When provided, the
      * value between the open and close symbol will be tokenized using this
      * tokenizer
      * @param boolean $willIncludeSymbols True to include the open and close
@@ -117,7 +117,7 @@ class NestedSymbol extends AbstractSymbol {
      * @param integer $initialOpenPosition The position of the open symbol for
      * which to find the close symbol
      * @return integer The position of the close symbol
-     * @throws pallo\ZiboException when the symbol is opened but not closed
+     * @throws ride\ZiboException when the symbol is opened but not closed
      */
     protected function getClosePosition($string, $initialOpenPosition) {
         $initialOpenPosition++;
@@ -141,7 +141,7 @@ class NestedSymbol extends AbstractSymbol {
      * Sets the open symbol
      * @param string $symbol
      * @return null
-     * @throws pallo\ZiboException when the provided symbol is empty or not a
+     * @throws ride\ZiboException when the provided symbol is empty or not a
      * string
      */
     private function setOpenSymbol($symbol) {
@@ -158,7 +158,7 @@ class NestedSymbol extends AbstractSymbol {
      * Sets the close symbol
      * @param string $symbol
      * @return null
-     * @throws pallo\ZiboException when the provided symbol is empty or not a
+     * @throws ride\ZiboException when the provided symbol is empty or not a
      * string
      */
     private function setCloseSymbol($symbol) {

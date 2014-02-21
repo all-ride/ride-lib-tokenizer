@@ -1,9 +1,9 @@
 <?php
 
-namespace pallo\library\tokenizer;
+namespace ride\library\tokenizer;
 
-use pallo\library\tokenizer\symbol\NestedSymbol;
-use pallo\library\tokenizer\symbol\SimpleSymbol;
+use ride\library\tokenizer\symbol\NestedSymbol;
+use ride\library\tokenizer\symbol\SimpleSymbol;
 
 use \PHPUnit_Framework_TestCase;
 

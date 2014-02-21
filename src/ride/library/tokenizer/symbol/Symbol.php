@@ -1,6 +1,6 @@
 <?php
 
-namespace pallo\library\tokenizer\symbol;
+namespace ride\library\tokenizer\symbol;
 
 /**
  * A symbol used to tokenize a string
