@@ -12,7 +12,7 @@ class NestedSymbol extends AbstractSymbol {
 
     /**
      * Tokenizer to tokenize the value between the open and close symbol
-     * @var ride\library\tokenizer\Tokenizer
+     * @var \ride\library\tokenizer\Tokenizer
      */
     protected $tokenizer;
 
@@ -56,7 +56,7 @@ class NestedSymbol extends AbstractSymbol {
      * Constructs a new nested tokenizer
      * @param string $symbolOpen Open symbol of the token
      * @param string $symbolClose Close symbol of the token
-     * @param ride\library\tokenizer\Tokenizer $tokenizer When provided, the
+     * @param \ride\library\tokenizer\Tokenizer $tokenizer When provided, the
      * value between the open and close symbol will be tokenized using this
      * tokenizer
      * @param boolean $willIncludeSymbols True to include the open and close
@@ -100,15 +100,25 @@ class NestedSymbol extends AbstractSymbol {
 
         $process .= $between . $this->symbolClose;
 
-        if ($this->tokenizer !== null) {
+        if ($between !== '' && $this->tokenizer !== null) {
             $between = $this->tokenizer->tokenize($between);
         }
 
+        $result = array();
+        if ($before !== '') {
+            $result[] = $before;
+        }
         if ($this->willIncludeSymbols) {
-            return array($before, $this->symbolOpen, $between, $this->symbolClose);
+            $result[] = $this->symbolOpen;
+            if ($between !== '') {
+                $result[] = $between;
+            }
+            $result[] = $this->symbolClose;
+        } elseif ($between !== '') {
+            $result[] = $between;
         }
 
-        return array($before, $between);
+        return $result;
     }
 
     /**
@@ -117,7 +127,7 @@ class NestedSymbol extends AbstractSymbol {
      * @param integer $initialOpenPosition The position of the open symbol for
      * which to find the close symbol
      * @return integer The position of the close symbol
-     * @throws ride\ZiboException when the symbol is opened but not closed
+     * @throws \ride\library\tokenizer\exception\TokenizeException when the symbol is opened but not closed
      */
     protected function getClosePosition($string, $initialOpenPosition) {
         $initialOpenPosition++;
@@ -141,7 +151,7 @@ class NestedSymbol extends AbstractSymbol {
      * Sets the open symbol
      * @param string $symbol
      * @return null
-     * @throws ride\ZiboException when the provided symbol is empty or not a
+     * @throws \ride\library\tokenizer\exception\TokenizerException when the provided symbol is empty or not a
      * string
      */
     private function setOpenSymbol($symbol) {
@@ -158,7 +168,7 @@ class NestedSymbol extends AbstractSymbol {
      * Sets the close symbol
      * @param string $symbol
      * @return null
-     * @throws ride\ZiboException when the provided symbol is empty or not a
+     * @throws \ride\library\tokenizer\exception\TokenizerException when the provided symbol is empty or not a
      * string
      */
     private function setCloseSymbol($symbol) {

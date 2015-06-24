@@ -1,7 +1,7 @@
 {
     "name": "ride/lib-tokenizer",
     "description": "Tokenizer library of the Ride framework.",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "authors": [
         {
             "name": "Joris Vandeweerd",

@@ -23,7 +23,7 @@ class Tokenizer {
 
     /**
      * Adds a tokenize symbol to this tokenizer
-     * @param ride\library\tokenizer\symbol\Symbol $symbol
+     * @param \ride\library\tokenizer\symbol\Symbol $symbol
      * @return null
      */
     public function addSymbol(Symbol $symbol) {
