@@ -100,15 +100,25 @@ class NestedSymbol extends AbstractSymbol {
 
         $process .= $between . $this->symbolClose;
 
-        if ($this->tokenizer !== null) {
+        if ($between !== '' && $this->tokenizer !== null) {
             $between = $this->tokenizer->tokenize($between);
         }
 
+        $result = array();
+        if ($before !== '') {
+            $result[] = $before;
+        }
         if ($this->willIncludeSymbols) {
-            return array($before, $this->symbolOpen, $between, $this->symbolClose);
+            $result[] = $this->symbolOpen;
+            if ($between !== '') {
+                $result[] = $between;
+            }
+            $result[] = $this->symbolClose;
+        } elseif ($between !== '') {
+            $result[] = $between;
         }
 
-        return array($before, $between);
+        return $result;
     }
 
     /**
