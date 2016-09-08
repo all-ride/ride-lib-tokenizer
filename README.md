@@ -39,3 +39,11 @@ $tokens = $tokenizer->tokenize($condition);
 //    )
 // )
 ```
+
+## Installation
+
+You can use [Composer](http://getcomposer.org) to install this library.
+
+```
+composer require ride/lib-tokenizer
+```
