@@ -9,7 +9,12 @@
     ],
     "autoload": {
         "psr-0": {
-            "ride\\library\\tokenizer\\": ["src/", "test/src/"]
+            "ride\\library\\tokenizer\\": ["src/"]
+        }
+    },
+    "autoload-dev": {
+        "psr-0": {
+            "ride\\library\\tokenizer\\": ["test/src/"]
         }
     }
 }
