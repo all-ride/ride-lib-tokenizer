@@ -39,3 +39,16 @@ $tokens = $tokenizer->tokenize($condition);
 //    )
 // )
 ```
+
+### Implementations
+
+For more examples, you can check the following implementation of this library:
+- [ride/lib-orm](https://github.com/all-ride/ride-lib-orm)
+
+## Installation
+
+You can use [Composer](http://getcomposer.org) to install this library.
+
+```
+composer require ride/lib-tokenizer
+```
