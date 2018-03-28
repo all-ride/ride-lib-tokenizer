@@ -5,9 +5,9 @@ namespace ride\library\tokenizer;
 use ride\library\tokenizer\symbol\NestedSymbol;
 use ride\library\tokenizer\symbol\SimpleSymbol;
 
-use \PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class TokenizerTest extends PHPUnit_Framework_TestCase {
+class TokenizerTest extends TestCase {
 
 	private $tokenizer;
 
