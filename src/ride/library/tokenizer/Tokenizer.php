@@ -44,7 +44,7 @@ class Tokenizer {
         $tokens = array();
 
         $toProcess = $string;
-        $countToProcess = count($toProcess);
+        $countToProcess = strlen($toProcess);
         $process = '';
 
         while ($countToProcess != 0 && strlen($process) < $countToProcess) {
