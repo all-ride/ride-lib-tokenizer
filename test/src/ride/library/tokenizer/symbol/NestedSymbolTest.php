@@ -28,9 +28,9 @@ class NestedSymbolTest extends TestCase {
 
     /**
      * @expectedException ride\library\tokenizer\exception\TokenizeException
-     * @expectedExceptionMessage Provided open symbol is empty or not a string
+     * @expectedExceptionMessage Provided close symbol is empty or not a string
      */
-    public function testConstructorOnEmptycCloseSymbol() {
+    public function testConstructorOnEmptyCloseSymbol() {
         $symbol = new NestedSymbol('[', '', null, true, true);
     }
 
